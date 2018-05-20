@@ -15,6 +15,20 @@
         android:scaleType="fitCenter"
         />
 
+    <Button
+        android:id="@+id/backBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Forget Password"
+        android:textStyle="normal"
+        android:layout_gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+
+        />
+
 
 
 </RelativeLayout>
