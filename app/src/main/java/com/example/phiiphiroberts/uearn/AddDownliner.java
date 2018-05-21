@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -78,8 +77,9 @@ public class AddDownliner extends AppCompatActivity {
                                     String user_id = mAuth.getCurrentUser().getUid();
                                     DatabaseReference current_user = mDatabase.child((user_id));
                                     current_user.child("EMAIL").setValue(user_mail);
-                                    current_user.child("EMAIL").setValue(user_mail);
-                                    FancyToast.makeText(AddDownliner.this, "Login Successful", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false).show();
+                                    current_user.child("USERNAME").setValue(user_name);
+
+                                    FancyToast.makeText(AddDownliner.this, "Sign Up Successful", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false).show();
                                 }else {
                                     FancyToast.makeText(AddDownliner.this, "Account Exist", FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
                                 }
@@ -99,7 +99,7 @@ public class AddDownliner extends AppCompatActivity {
                     } else if (!TextUtils.isEmpty(user_mail) && TextUtils.isEmpty(user_password) && !TextUtils.isEmpty(user_name)){
                         DownPass.setError("Required Field");
 
-                    } else if (TextUtils.isEmpty(user_mail) && !TextUtils.isEmpty(user_password) && !TextUtils.isEmpty(user_name)){
+                    } else if (!TextUtils.isEmpty(user_mail) && !TextUtils.isEmpty(user_password) && TextUtils.isEmpty(user_name)){
                         DownUserName.setError("Required Field");
 
                     } else if (TextUtils.isEmpty(user_mail) && TextUtils.isEmpty(user_password) && !TextUtils.isEmpty(user_name)) {

@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="LOGIN"
+                android:text="ADD DOWNLINER"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
@@ -58,7 +58,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
-                        android:background="@drawable/ic_person_outline_black_24dp"
                         android:text="USERNAME"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
@@ -70,6 +69,7 @@
                         android:layout_height="40dp"
                         android:inputType="textPersonName"
                         android:layout_marginTop="5dp"
+                        android:drawableLeft="@drawable/ic_person_outline_black_24dp"
                         android:background="@drawable/et_bg"
                         android:fontFamily="sans-serif-light"
                         android:paddingLeft="15dp"

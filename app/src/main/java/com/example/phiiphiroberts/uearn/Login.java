@@ -2,6 +2,7 @@ package com.example.phiiphiroberts.uearn;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
@@ -77,6 +78,9 @@ public class Login extends AppCompatActivity {
                                         String user_id = mAuth.getCurrentUser().getUid();
                                         DatabaseReference current_user = mDatabase.child((user_id));
                                         current_user.child("EMAIL").setValue(user_email);
+
+                                        Intent ActivityMain = new Intent(Login.this, MainActivity.class);
+                                        startActivity(ActivityMain);
                                         FancyToast.makeText(Login.this, "Login Successful", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false).show();
                                     }else {
                                         FancyToast.makeText(Login.this, "Wrong Password", FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
