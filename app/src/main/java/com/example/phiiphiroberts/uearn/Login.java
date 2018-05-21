@@ -36,6 +36,7 @@ public class Login extends AppCompatActivity {
         @Override
         public void run() {
             rellay1.setVisibility(View.VISIBLE);
+
         }
     };
 
@@ -69,7 +70,7 @@ public class Login extends AppCompatActivity {
                     final String user_pass = Password.getText().toString().trim();
 
                     if (!TextUtils.isEmpty(user_email) && !TextUtils.isEmpty(user_pass)) {
-                            mAuth.createUserWithEmailAndPassword(user_email, user_pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            mAuth.signInWithEmailAndPassword(user_email, user_pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
@@ -78,7 +79,7 @@ public class Login extends AppCompatActivity {
                                         current_user.child("EMAIL").setValue(user_email);
                                         FancyToast.makeText(Login.this, "Login Successful", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false).show();
                                     }else {
-                                        FancyToast.makeText(Login.this, "Account Exist", FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
+                                        FancyToast.makeText(Login.this, "Wrong Password", FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
                                     }
                                 }
                             });
