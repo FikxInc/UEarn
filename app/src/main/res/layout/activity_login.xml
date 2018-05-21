@@ -67,6 +67,7 @@
                         android:id="@+id/userEmail"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:inputType="textEmailAddress"
                         android:layout_marginTop="5dp"
                         android:background="@drawable/et_bg"
                         android:fontFamily="sans-serif-light"
@@ -98,6 +99,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
+                        android:inputType="textPassword"
                         android:background="@drawable/et_bg"
                         android:fontFamily="sans-serif-light"
                         android:paddingLeft="15dp"
@@ -130,7 +132,7 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+   <!-- <RelativeLayout
         android:id="@+id/rellay2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -160,6 +162,6 @@
             android:textColor="@color/white"/>
 
 
-    </RelativeLayout>
+    </RelativeLayout>-->
 
 </RelativeLayout>
