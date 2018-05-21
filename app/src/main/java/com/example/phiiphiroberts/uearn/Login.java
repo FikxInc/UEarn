@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class Login extends AppCompatActivity {
-    RelativeLayout rellay1, rellay2;
+    RelativeLayout rellay1; //rellay2;
     Button btnSignIn;
 
     private DatabaseReference mDatabase;
@@ -36,8 +36,6 @@ public class Login extends AppCompatActivity {
         @Override
         public void run() {
             rellay1.setVisibility(View.VISIBLE);
-            rellay2.setVisibility(View.VISIBLE);
-
         }
     };
 
@@ -47,7 +45,6 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         rellay1 = findViewById(R.id.rellay1);
-        rellay2 = findViewById(R.id.rellay2);
 
         handler.postDelayed(runnable, 1000);//time out for the splash screen
 
@@ -80,6 +77,8 @@ public class Login extends AppCompatActivity {
                                         DatabaseReference current_user = mDatabase.child((user_id));
                                         current_user.child("EMAIL").setValue(user_email);
                                         FancyToast.makeText(Login.this, "Login Successful", FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false).show();
+                                    }else {
+                                        FancyToast.makeText(Login.this, "Account Exist", FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
                                     }
                                 }
                             });
@@ -87,15 +86,15 @@ public class Login extends AppCompatActivity {
 
                     //Checking for Empty Fields and setting errors to fields
                     if (TextUtils.isEmpty(user_email) && TextUtils.isEmpty(user_pass)) {
-                        Email.setError("This field is required");
-                        Password.setError("This field is required");
+                        Email.setError("Required Field");
+                        Password.setError("Required Field");
                         return;
                     } else if (TextUtils.isEmpty(user_email) && !TextUtils.isEmpty(user_pass)) {
-                        Email.setError("This field is required");
+                        Email.setError("Required Field");
                         return;
-                    } else if (!TextUtils.isEmpty(user_pass) && TextUtils.isEmpty(user_pass)) {
-                        Password.setError("This field is required");
-                        return;
+                    } else if (!TextUtils.isEmpty(user_email) && TextUtils.isEmpty(user_pass)){
+                        Password.setError("Required Field");
+
                     } else {
 
                     }
