@@ -54,7 +54,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/userEmail"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
@@ -64,6 +64,7 @@
                         android:textSize="15sp" />
 
                     <EditText
+                        android:id="@+id/userEmail"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
@@ -84,7 +85,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/userPassword"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
@@ -94,6 +94,7 @@
                         android:textSize="15dp"/>
 
                     <EditText
+                        android:id="@+id/userPassword"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="5dp"
@@ -110,7 +111,6 @@
 
             <Button
                 android:id="@+id/logBttn"
-                android:onClick="loginButtonClicked"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_below="@+id/linlay1"
@@ -120,7 +120,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:paddingLeft="70dp"
                 android:paddingRight="70dp"
-                android:text="LOGIN NOW"
+                android:text="LOGIN"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="16sp"/>
