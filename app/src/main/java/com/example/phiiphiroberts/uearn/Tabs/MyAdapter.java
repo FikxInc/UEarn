@@ -22,7 +22,7 @@ import com.example.phiiphiroberts.uearn.fragment.TransactionFragment;
 public class MyAdapter extends FragmentPagerAdapter {
     private Context mContext;
     private String[] titles = {"Home", "Downliners", "Transactions", "Profile"};
-    int[] icon = new int[]{R.drawable.baseline_home_white_24dp, R.drawable.baseline_trending_down_white_24dp, R.drawable.baseline_work_outline_white_24dp, R.drawable.baseline_perm_identity_white_24dp};
+    int[] icon = new int[]{R.drawable.home_outline, R.drawable.chart_areaspline, R.drawable.baseline_work_outline_white_24dp, R.drawable.menu};
     private int heightIcon;
 
     public MyAdapter(FragmentManager fm, Context c) {
