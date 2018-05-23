@@ -23,13 +23,16 @@
             android:background="@color/login"
             app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
-        <!-- SEARCH BAR -->
+            <include layout="@layout/activity_search"/>
+
+        <!-- SEARCH BAR
         <com.miguelcatalan.materialsearchview.MaterialSearchView
             android:id="@+id/search_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="visible"
             />
+            -->
         </FrameLayout>
 
     </android.support.design.widget.AppBarLayout>

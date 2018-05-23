@@ -28,7 +28,7 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 
 public class MainActivity extends AppCompatActivity {
 
-    MaterialSearchView searchView;
+   // MaterialSearchView searchView;
     private SlidingTabLayout mSlidingTabLayout;
     private ViewPager mViewPager;
 
@@ -43,21 +43,10 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
 
         //SEARCH VIEW BAR
-         searchView = findViewById(R.id.search_view);
-         searchView.closeSearch();
-         searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
-             @Override
-             public boolean onQueryTextSubmit(String query) {
-                 //HERE CREATE YOUR FILTERING
-                 return false;
-             }
+        // searchView = findViewById(R.id.search_view);
+        // searchView.closeSearch();
+        // searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
 
-             @Override
-             public boolean onQueryTextChange(String newText) {
-                 //REAL TIME CHANGE IF YOU ARE TYPING HERE
-                 return false;
-             }
-         });
 
 
         // SLIDING NAVIGATION TABS
@@ -78,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_item, menu);
         MenuItem item = menu.findItem(R.id.action_search);
-        searchView.setMenuItem(item);
+        //searchView.setMenuItem(item);
         return true;
     }
 }
