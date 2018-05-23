@@ -15,7 +15,6 @@ import com.example.phiiphiroberts.uearn.R;
 import com.example.phiiphiroberts.uearn.fragment.DownlinersFragment;
 import com.example.phiiphiroberts.uearn.fragment.HomeFragment;
 import com.example.phiiphiroberts.uearn.fragment.ProfileFragment;
-import com.example.phiiphiroberts.uearn.fragment.ShopingFragment;
 import com.example.phiiphiroberts.uearn.fragment.TransactionFragment;
 
 

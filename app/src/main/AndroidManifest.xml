@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login"></activity>
-        <activity android:name=".AddDownliner"></activity>
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".AddDownliner" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".Profile"></activity>
     </application>
 
 </manifest>
